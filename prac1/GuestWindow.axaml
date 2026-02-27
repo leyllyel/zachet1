@@ -1,0 +1,7 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="prac1.GuestWindow"
+        Title="Гостевой режим"
+        Width="600" Height="400">
+    <TextBlock Text="Вы вошли как гость" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+</Window>

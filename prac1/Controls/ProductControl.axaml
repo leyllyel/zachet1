@@ -1,0 +1,42 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="prac1.Controls.ProductControl"
+             Width="300" MinHeight="200" Margin="5">
+    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5">
+        <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+            
+            <Image x:Name="ProductImage" Grid.RowSpan="7" Width="100" Height="140" Margin="5" Stretch="UniformToFill"/>
+
+           
+            <TextBlock x:Name="NameText" Grid.Column="1" Grid.Row="0" FontWeight="Bold" Margin="5" TextWrapping="Wrap"/>
+
+           
+            <TextBlock x:Name="DescriptionText" Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="Wrap"/>
+
+           
+            <TextBlock x:Name="CategoryText" Grid.Column="1" Grid.Row="2" Margin="5"/>
+
+            
+            <TextBlock x:Name="ManufacturerText" Grid.Column="1" Grid.Row="3" Margin="5"/>
+
+          
+            <TextBlock x:Name="SupplierText" Grid.Column="1" Grid.Row="4" Margin="5"/>
+
+            
+            <StackPanel Grid.Column="1" Grid.Row="5" Orientation="Horizontal" Margin="5" Spacing="10">
+                <TextBlock x:Name="OldPriceText" TextDecorations="Strikethrough" Foreground="Red"/>
+                <TextBlock x:Name="PriceText" FontWeight="Bold"/>
+                <TextBlock x:Name="UnitText"/>
+                <TextBlock x:Name="StockText"/>
+            </StackPanel>
+
+    
+            <Border x:Name="DiscountBorder" Grid.Column="1" Grid.Row="6" Background="Green" HorizontalAlignment="Left" CornerRadius="3" Padding="5" IsVisible="False">
+                <TextBlock x:Name="DiscountText" Foreground="White"/>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

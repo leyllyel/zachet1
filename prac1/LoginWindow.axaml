@@ -1,0 +1,34 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="prac1.LoginWindow"
+        Title="Авторизация | ООО Обувь"
+        Icon="/Resources/Icons/Icon.ico"
+        Width="400" Height="400"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Spacing="10" Margin="20">
+        
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+        <Image Width="32" Height="32" Source="/Resources/Icons/Icon.png"/>
+        <TextBlock Text="ООО 'Обувь'" FontSize="28" FontWeight="Bold" VerticalAlignment="Center"/>
+    </StackPanel>
+        
+       
+        <TextBlock Text="Электронная почта" FontSize="16" FontWeight="Light" Margin="0,0,0,5"/>
+        <TextBox x:Name="Email" Watermark="Введите email" Margin="0,0,0,10"/>
+        
+       
+        <TextBlock Text="Пароль" FontSize="16" FontWeight="Light" Margin="0,0,0,5"/>
+        <TextBox x:Name="Password" Watermark="Введите пароль" PasswordChar="*" Margin="0,0,0,10"/>
+        
+        
+        <TextBlock x:Name="Error" Text="Неверный логин или пароль" Foreground="Red" FontSize="14" 
+                   HorizontalAlignment="Center" IsVisible="False" Margin="0,0,0,10"/>
+        
+        <Button x:Name="LoginButton" Content="Войти" Click="LoginButton_Click" 
+                HorizontalAlignment="Center" Width="150" Height="35" Margin="0,5"/>
+        <Button x:Name="GuestButton" Content="Гостевой режим" Click="GuestButton_Click" 
+                HorizontalAlignment="Center" Width="150" Height="35" Margin="0,5"/>
+        
+    </StackPanel>
+</Window>

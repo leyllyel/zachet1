@@ -1,0 +1,45 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:prac1.Controls"
+        x:Class="prac1.MainWindow"
+        Title="ООО 'Обувь'"
+        Icon="/Resources/Icons/Icon.ico"
+        Width="1200" Height="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Левая панель навигации -->
+        <Border Grid.Column="0" Background="#f0f0f0" Padding="10">
+            <StackPanel Spacing="10">
+               <Image Width="32" Height="32" Source="/Resources/Icons/Icon.png"/>
+            <TextBlock Text="ООО 'Обувь'" FontSize="22" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Button Content="Товары" HorizontalAlignment="Stretch" Click="ProductsButton_Click"/>
+                <Button Content="Заказы" HorizontalAlignment="Stretch" Click="OrdersButton_Click"/>
+                <Button Content="Добавить товар" HorizontalAlignment="Stretch" Click="AddProductButton_Click"/>
+                <Button Content="Добавить заказ" HorizontalAlignment="Stretch" Click="AddOrderButton_Click"/>
+                <Button Content="Выход" HorizontalAlignment="Stretch" Margin="0,50,0,0" Click="LogoutButton_Click"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Центральная часть: список товаров -->
+        <Border Grid.Column="1" Padding="10">
+            <controls:ProductSearchControl x:Name="ProductSearchControl"/>
+        </Border>
+
+        <!-- Правая панель: управление скидкой -->
+        <Border Grid.Column="2" Background="#f9f9f9" Padding="10">
+            <StackPanel Spacing="15">
+                
+                <TextBlock x:Name="SelectedProductName" Text="Товар не выбран" TextWrapping="Wrap"/>
+                <TextBlock Text="Текущая скидка:"/>
+                <TextBlock x:Name="CurrentDiscount" Text="0%" Width="30"/>
+               
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

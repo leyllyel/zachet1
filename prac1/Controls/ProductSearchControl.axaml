@@ -1,0 +1,14 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="prac1.Controls.ProductSearchControl">
+    <DockPanel>
+        <TextBox x:Name="SearchBox" DockPanel.Dock="Top" Watermark="Поиск..." TextChanged="SearchBox_TextChanged" Margin="5"/>
+        <ListBox x:Name="ProductsListBox" Margin="5" Background="Transparent" SelectionChanged="ProductsListBox_SelectionChanged">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </DockPanel>
+</UserControl>
